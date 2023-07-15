@@ -1,6 +1,6 @@
-const ProductModel=require("../models/product.model");
+const Product=require("../models/product.model");
  async function addProductService(productData) {
-    const product =await ProductModel.create(productData);
+    const product =await Product.create(productData);
         
         if(product)
         {
@@ -20,7 +20,7 @@ const ProductModel=require("../models/product.model");
 }
 
 async function getAllProductService() {
-    const products =await ProductModel.find();
+    const products =await Product.find();
         
         if(products)
         {
@@ -40,7 +40,7 @@ async function getAllProductService() {
 }
 
 async function updateProductService(id,updatedProduct) {
-    const product =await ProductModel.findByIdAndUpdate(id,updatedProduct,{new:true});
+    const product =await Product.findByIdAndUpdate(id,updatedProduct,{new:true});
         
         if(product)
         {

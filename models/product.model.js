@@ -9,5 +9,9 @@ const productSchema = mongoose.Schema({
     price:Number,
     rating:Number,
 })
-const ProductModel=mongoose.model('products',productSchema);
-module.exports=ProductModel;
+const Product=mongoose.model('Product',productSchema);
+// products-collection name
+//  it converts the model name provide to mongoose.model('product') in lowr case
+// it make plurals - products
+// now products will be our collection name 
+module.exports=Product;
